@@ -4,7 +4,6 @@ import type {
   Identity,
   AboutPageContent,
   ProjectPageContent,
-  BlogPageContent,
   HomePageContent,
 } from "./types/config";
 
@@ -15,22 +14,9 @@ export const identity: Identity = {
 };
 
 export const navBarLinks: NavBarLink[] = [
-  {
-    title: "Home",
-    url: "/",
-  },
-  {
-    title: "About",
-    url: "/about",
-  },
-  {
-    title: "Projects",
-    url: "/projects",
-  },
-  {
-    title: "Blog",
-    url: "/blog",
-  },
+  { title: "Home", url: "/" },
+  { title: "About", url: "/about" },
+  { title: "Projects", url: "/projects" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -45,8 +31,12 @@ export const socialLinks: SocialLink[] = [
     url: "mailto:gairenishan@gmail.com",
     icon: "mdi:email",
   },
-  { title: "LinkedIn", url: "https://www.linkedin.com/in/nishant-gaire-6bb625240/", icon: "mdi:linkedin", external: true }, // 🔁 if you changed URL
-
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/nishant-gaire-6bb625240/",
+    icon: "mdi:linkedin",
+    external: true,
+  },
 ];
 
 // Home (/)
@@ -59,17 +49,11 @@ export const homePageContent: HomePageContent = {
   },
   role: "Graduate Student & Backend/AI Developer",
   description:
-      "Graduate Computer Science student with hands-on experience in backend engineering and generative AI.",
+    "Graduate Computer Science student with hands-on experience in backend engineering and generative AI.",
   socialLinks: socialLinks,
   links: [
-    {
-      title: "My Projects",
-      url: "/projects",
-    },
-    {
-      title: "About Me",
-      url: "/about",
-    },
+    { title: "My Projects", url: "/projects" },
+    { title: "About Me", url: "/about" },
   ],
 };
 
@@ -83,7 +67,8 @@ export const aboutPageContent: AboutPageContent = {
   },
   subtitle: "Some information about myself",
   about: {
-    description:"Graduate Computer Science student with hands-on experience in backend engineering and generative AI. Skilled in prompt engineering, retrieval-augmented generation (RAG), and fine-tuning LLMs. Built NLP pipelines using embeddings and vector databases for high-speed retrieval, and designed scalable APIs and relational schemas integrating AI features into products.",
+    description:
+      "Graduate Computer Science student with hands-on experience in backend engineering and generative AI. Skilled in prompt engineering, retrieval-augmented generation (RAG), and fine-tuning LLMs. Built NLP pipelines using embeddings and vector databases for high-speed retrieval, and designed scalable APIs and relational schemas integrating AI features into products.",
     image_l: {
       url: "/demo-1.jpg",
       alt: "Left Picture",
@@ -94,14 +79,14 @@ export const aboutPageContent: AboutPageContent = {
     },
   },
   work: {
-    description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`, // Markdown is supported
+    description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`,
     items: [
       {
         title: "Software Developer",
         company: {
           name: "Freelance",
           image: "/logo.webp",
-          url: "https://github.com/TimWitzdam",
+          url: "https://github.com/NishantGaire",
         },
         date: "2021 - Present",
       },
@@ -110,14 +95,14 @@ export const aboutPageContent: AboutPageContent = {
         company: {
           name: "Freelance",
           image: "/logo.webp",
-          url: "https://github.com/TimWitzdam",
+          url: "https://github.com/NishantGaire",
         },
         date: "2019 - 2021",
       },
     ],
   },
   connect: {
-    description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
+    description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`,
     links: socialLinks,
   },
 };
@@ -125,42 +110,32 @@ export const aboutPageContent: AboutPageContent = {
 // Projects (/projects)
 export const projectsPageContent: ProjectPageContent = {
   seo: {
-    title: "Projects | Tim Witzdam",
-    description: "Check out what I've been working on.",
+    title: "Projects | Nishant Gaire",
+    description: "Selected work in backend, AI/ML, and RAG.",
     image: identity.logo,
   },
-  subtitle: "Check out what I've been working on.",
+  subtitle: "Selected projects.",
   projects: [
     {
       title: "Project 1",
       description: "Project 1 Description",
       image: "/demo-2.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://github.com/NishantGaire",
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
+      title: "Project 2",
+      description: "Project 2 Description",
       image: "/demo-2.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://github.com/NishantGaire",
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
+      title: "Project 3",
+      description: "Project 3 Description",
       image: "/demo-2.jpg",
       year: "2024",
-      url: "https://github.com/TimWitzdam",
+      url: "https://github.com/NishantGaire",
     },
   ],
-};
-
-// Blog (/blog)
-export const blogPageContent: BlogPageContent = {
-  seo: {
-    title: "Blog | Tim Witzdam",
-    description: "Thoughts, stories and ideas.",
-    image: identity.logo,
-  },
-  subtitle: "Thoughts, stories and ideas.",
 };

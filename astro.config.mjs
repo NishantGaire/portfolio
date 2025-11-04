@@ -1,16 +1,13 @@
+// astro.config.mjs
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import { remarkReadingTime } from "./remark-reading-time.mjs";
-import node from "@astrojs/node";
 
-// https://astro.build/config
+// Static output for Vercel (no server adapter needed)
 export default defineConfig({
+  output: "static",
   integrations: [tailwind(), icon()],
-  output: "server",
-  adapter: node({
-    mode: "standalone",
-  }),
   markdown: {
     remarkPlugins: [remarkReadingTime],
   },
